@@ -1,0 +1,57 @@
+.control-center {
+	background-color: alpha(var(--cc-bg), 0.6);
+	font-size: 15pt;
+	border: 5px solid var(--cc-border);
+	border-radius: 5rem;
+	box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* lable widget styling */
+.widget-label > label {
+	color: var(--wgt-label-txt);
+	margin: 2rem;
+	margin-bottom: 1rem;
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+/* button-grid widget stying */
+@import "control-center-styles/button-grid-widget.css";
+
+/* mpris widget styling */
+@import "control-center-styles/mpris-widget.css";
+
+/* title widget styling */
+.widget-title > label {
+	margin-left: 1rem;
+	color: var(--wgt-title-txt);
+}
+
+.widget-title > button {
+	margin-right: 1rem;
+	border-radius: 1rem;
+	padding: 0.8rem 0.5rem;
+	background-color: var(--wgt-title-btn-bg);
+	color: var(--wgt-title-btn-txt);
+}
+
+.widget-title > button label {
+	margin-right: 0.8rem;
+}
+
+.widget-title > button:hover {
+	background-color: var(--wgt-title-btn-bg-hvr);
+}
+/*-----------------------------------------------------*/
+
+/* notifications widget styling */
+.widget-notifications {
+	color: alpha(var(--wgt-notif-txt), 0.6);
+}
+
+.widget-notification image {
+    -gtk-icon-name: "face-smile-symbolic";
+}
+
+/* notification group styling */
+@import "control-center-styles/notification-group.css";

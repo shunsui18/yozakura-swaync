@@ -1,0 +1,54 @@
+ .notification-row
+	.notification-background
+	.notification.critical
+	.notification-default-action
+	.notification-content {
+	background-color: alpha(var(--notif-critical-content-bg), 0.7);
+}
+
+ .notification-row
+	.notification-background
+	.notification.critical
+	.notification-default-action
+	.notification-content:hover {
+	background-color: var(--notif-critical-content-bg-hvr);
+}
+
+.notification-row
+	.notification-background
+	.notification.critical
+	.notification-default-action
+	.notification-content
+	.text-box
+	.summary {
+	color: var(--notif-critical-summary-txt);
+}
+
+.notification-row
+	.notification-background
+	.notification.critical
+	.notification-default-action
+	.notification-content
+	.text-box
+	.body {
+	color: var(--notif-critical-body-txt);
+}
+
+.notification-row
+	.notification-background
+	.notification.critical
+	.notification-default-action
+	.notification-content
+	.text-box
+	.time {
+	color: var(--notif-critical-time-txt);
+}
+
+.notification-row
+	.notification-background
+	.notification.critical
+	.notification-default-action
+	.notification-content
+	progressbar {
+	background-color: alpha(var(--notif-critical-pbar-bg), 0.5);
+}

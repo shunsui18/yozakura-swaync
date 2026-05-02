@@ -1,0 +1,95 @@
+/**
+ *    ░█▀▀░█░█░█▀█░█░█░█▀█░█▀▀            
+ *    ░▀▀█░█▄█░█▀█░░█░░█░█░█░░            
+ *    ░▀▀▀░▀░▀░▀░▀░░▀░░▀░▀░▀▀▀            
+ *
+ *    ░█▀▀░█▀█░█░░░█▀█░█▀▄░░░░░█▄█░█▀█░█▀█
+ *    ░█░░░█░█░█░░░█░█░█▀▄░▄▄▄░█░█░█▀█░█▀▀
+ *    ░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░░░▀░▀░▀░▀░▀░░
+ -----------------------------------------*/
+
+@import "colors.css";
+
+:root {
+	/* control center colors */
+	--cc-bg: var(--base);
+	--cc-border: var(--bloom);
+
+	/* widget label colors */
+	--wgt-label-txt: var(--text);
+
+	/* widget button grid colors */
+	--wgt-btn-grid-bg: var(--raised);
+	--wgt-btn-grid-border: var(--bloom);
+	--wgt-btn-bg: var(--dusk);
+	--wgt-btn-txt: var(--rim);
+	--wgt-btn-chk-txt: var(--base);
+
+	--wgt-btn-bg-clip: var(--blush);
+	--wgt-btn-bg-bt: var(--starlight);
+	--wgt-btn-bg-notif: var(--sky);
+	--wgt-btn-bg-vol: var(--lantern);
+	--wgt-btn-bg-kdeconnect: var(--moss);
+
+	/* widget mpris colors */
+	--wgt-mpris-border: var(--amber);
+	--wgt-mpris-overlay: var(--stone);
+	--wgt-mpris-title-txt: var(--blush);
+	--wgt-mpris-subtitle-txt: var(--blush);
+	--wgt-mpris-player-btn: var(--blush);
+	--wgt-mpris-player-btn-hvr: var(--lantern);
+	--wgt-mpris-btn-bg: var(--lantern);
+	--wgt-mpris-btn-disabled: var(--muted);
+	--wgt-mpris-dots: var(--starlight);
+
+	/* widget title colors */
+	--wgt-title-txt: var(--text);
+	--wgt-title-btn-bg: var(--iris);
+	--wgt-title-btn-txt: var(--base);
+	--wgt-title-btn-bg-hvr: var(--crimson);
+
+	/* widget notifications colors */
+	--wgt-notif-txt: var(--muted);
+
+	/* notification group colors */
+	--notif-grp-icon-bg:                var(--starlight);
+	--notif-grp-icon-txt:               var(--base);
+	--notif-grp-header-txt:             var(--text);
+	--notif-grp-btn-coll-bg:            var(--moss);
+	--notif-grp-btn-coll-txt:           var(--base);
+	--notif-grp-btn-close-bg:           var(--crimson);
+	--notif-grp-btn-close-txt:          var(--base);
+	--notif-grp-exp:                    var(--lantern);
+	--notif-grp-collapsed-bg-hvr:       var(--lantern);
+
+	/* notification colors */
+	--notif-bg:                         var(--base);
+	--notif-border:                     var(--bloom);
+	--notif-content-bg:                 var(--indigo);
+	--notif-content-hvr-bg:             var(--indigo);
+	--notif-summary-txt:                var(--text);
+	--notif-body-txt:                   var(--text);
+	--notif-time-txt:                   var(--muted);
+	--notif-close-btn-bg:               var(--crimson);
+	--notif-close-btn-txt:              var(--base);
+	--notif-close-btn-bg-hvr:           var(--crimson);
+	--notif-pbar-bg:                    var(--dusk);
+	--notif-pbar:                       var(--starlight);
+	--notif-action-btn-bg:              var(--sky);
+	--notif-action-btn-txt:             var(--base);
+	--notif-inline-bg:                  var(--active);
+	--notif-inline-txt:                 var(--text);
+	--notif-inline-cursor:              var(--text);
+	--notif-inline-border:              var(--blush);
+	--notif-inline-placeholder:         var(--muted);
+	--notif-inline-btn-bg:              var(--starlight);
+	--notif-inline-btn-txt:             var(--base);
+	--notif-inline-btn-bg-hvr:          var(--moss);
+
+	--notif-critical-content-bg:        var(--ember);
+	--notif-critical-content-bg-hvr:    var(--ember);
+	--notif-critical-summary-txt:       var(--base);
+	--notif-critical-body-txt:          var(--base);
+	--notif-critical-time-txt:          var(--active);
+	--notif-critical-pbar-bg:           var(--starlight);
+}

@@ -1,0 +1,58 @@
+.widget-mpris {
+	margin: 2rem;
+	margin-bottom: 0;
+}
+
+.widget-mpris .widget-mpris-player {
+	border: 5px solid var(--wgt-mpris-border);
+	border-radius: 2rem;
+	box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.8);
+}
+
+.widget-mpris .widget-mpris-player .mpris-background {
+	filter: blur(2px);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay {
+	background-color: alpha(var(--wgt-mpris-overlay), 0.6);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-album-art {
+	border-radius: 1.5rem;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+	-gtk-icon-size: 7rem;
+	margin-bottom: 0.5rem;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-title {
+	color: var(--wgt-mpris-title-txt);
+	font-weight: bold;
+	font-size: 1.3rem;
+	text-shadow: 0 0 6px black;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-subtitle {
+	color: var(--wgt-mpris-subtitle-txt);
+	font-size: 1.1rem;
+	text-shadow: 0 0 6px black;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay > box > button {
+	color: var(--wgt-mpris-player-btn);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay > box > button:hover {
+	background-color: alpha(var(--wgt-mpris-player-btn-hvr), 0.3);
+}
+
+.widget-mpris > box > button:hover {
+	background-color: alpha(var(--wgt-mpris-btn-bg), 0.5);
+}
+
+.widget-mpris > box > button:disabled {
+	color: var(--wgt-mpris-btn-disabled);
+}
+
+.widget-mpris carouselindicatordots {
+	color: var(--wgt-mpris-dots);
+}

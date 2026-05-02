@@ -1,0 +1,141 @@
+/* notification background */
+.notification-row .notification-background .notification {
+	background-color: alpha(var(--notif-bg), 0.55);
+	border: 5px solid var(--notif-border);
+	margin: 0.3rem 0;
+	border-radius: 2rem;
+	box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.8);
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action:hover {
+	background-color: transparent;
+}
+
+/* content background */
+@import "notification-styles/content.css";
+
+/* close button */
+.close-button {
+	background-color: alpha(var(--notif-close-btn-bg), 0.5);
+	color: var(--notif-close-btn-txt);
+	margin: 2rem 1.5rem 1rem 1rem;
+	box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.8);
+}
+
+.close-button:hover {
+	background-color: var(--notif-close-btn-bg-hvr);
+}
+/*------------------------------------------------------------------------------*/
+
+/* progress bar */
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content
+	progressbar {
+	margin: 1rem;
+	background-color: alpha(var(--notif-pbar-bg), 0.5);
+	border-radius: 1rem;
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content
+	progressbar
+	progress {
+	background-color: var(--notif-pbar);
+	padding: 0.2rem 0;
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content
+	progressbar
+	trough {
+	padding: 0.2rem 0;
+}
+/*------------------------------------------------------------------------------*/
+
+/* action button */
+.notification-row .notification-background .notification .notification-action {
+	background-color: alpha(var(--notif-action-btn-bg), 0.7);
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-action:hover {
+	background-color: var(--notif-action-btn-bg);
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-action
+	> button {
+	color: var(--notif-action-btn-txt);
+}
+/*------------------------------------------------------------------------------*/
+
+/* inline reply */
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content
+	.inline-reply {
+	margin: 1rem;
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content
+	.inline-reply
+	.inline-reply-entry {
+	background: var(--notif-inline-bg);
+	color: var(--notif-inline-txt);
+	caret-color: var(--notif-inline-cursor);
+	border: 2px solid var(--notif-inline-border);
+	border-radius: 2rem;
+}
+
+.notification-row .inline-reply-entry > text > placeholder {
+	color: var(--notif-inline-placeholder);
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content
+	.inline-reply
+	.inline-reply-button {
+	background: var(--notif-inline-btn-bg);
+	border: none;
+	border-radius: 1rem;
+	color: var(--notif-inline-btn-txt);
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content
+	.inline-reply
+	.inline-reply-button:hover {
+	background: var(--notif-inline-btn-bg-hvr);
+}
+/*------------------------------------------------------------------------------*/
+
+/* critical */
+@import "notification-styles/critical.css";

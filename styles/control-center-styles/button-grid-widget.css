@@ -1,0 +1,83 @@
+.widget-buttons-grid {
+	background-color: var(--wgt-btn-grid-bg);
+	margin: 0 4rem;
+	font-size: 15pt;
+	border: 5px solid var(--wgt-btn-grid-border);
+	border-radius: 5rem;
+	box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* buttnons */
+.widget-buttons-grid flowboxchild > button {
+	padding: 1rem 0;
+	margin: 0.55rem;
+	border-radius: 20px;
+	background-color: var(--wgt-btn-bg);
+	color: var(--wgt-btn-txt);
+}
+
+.widget-buttons-grid flowboxchild:hover {
+	background: none;
+}
+
+/* clipboard button */
+.widget-buttons-grid > flowbox > flowboxchild:nth-child(1) > button label {
+	margin-right: 0.28rem;
+}
+
+.widget-buttons-grid
+	> flowbox
+	> flowboxchild:nth-child(1)
+	> button.toggle:checked,
+.widget-buttons-grid > flowbox > flowboxchild:nth-child(1) > button:hover {
+	background-color: var(--wgt-btn-bg-clip);
+	color: var(--wgt-btn-chk-txt);
+}
+
+/* bluetooth button */
+.widget-buttons-grid
+	> flowbox
+	> flowboxchild:nth-child(2)
+	> button.toggle:checked,
+.widget-buttons-grid > flowbox > flowboxchild:nth-child(2) > button:hover {
+	background-color: var(--wgt-btn-bg-bt);
+	color: var(--wgt-btn-chk-txt);
+}
+
+/* notification button */
+.widget-buttons-grid > flowbox > flowboxchild:nth-child(3) > button label {
+	margin-right: 0.5rem;
+}
+
+.widget-buttons-grid
+	> flowbox
+	> flowboxchild:nth-child(3)
+	> button.toggle:checked,
+.widget-buttons-grid > flowbox > flowboxchild:nth-child(3) > button:hover {
+	background-color: var(--wgt-btn-bg-notif);
+	color: var(--wgt-btn-chk-txt);
+}
+
+/* volume button */
+.widget-buttons-grid > flowbox > flowboxchild:nth-child(4) > button label {
+	margin-right: 0.3rem;
+}
+
+.widget-buttons-grid
+	> flowbox
+	> flowboxchild:nth-child(4)
+	> button.toggle:checked,
+.widget-buttons-grid > flowbox > flowboxchild:nth-child(4) > button:hover {
+	background-color: var(--wgt-btn-bg-vol);
+	color: var(--wgt-btn-chk-txt);
+}
+
+/* kdeconnect button */
+.widget-buttons-grid
+	> flowbox
+	> flowboxchild:nth-child(5)
+	> button.toggle:checked,
+.widget-buttons-grid > flowbox > flowboxchild:nth-child(5) > button:hover {
+	background-color: var(--wgt-btn-bg-kdeconnect);
+	color: var(--wgt-btn-chk-txt);
+}

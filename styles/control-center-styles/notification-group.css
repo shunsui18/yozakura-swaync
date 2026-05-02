@@ -1,0 +1,57 @@
+.notification-group {
+	background: none;
+}
+
+.notification-group .notification-group-headers .notification-group-icon {
+	background-color: var(--notif-grp-icon-bg);
+	color: var(--notif-grp-icon-txt);
+	border-radius: 0.5rem;
+}
+
+.notification-group .notification-group-headers .notification-group-header {
+	color: var(--notif-grp-header-txt);
+	font-size: 15pt;
+}
+
+.notification-group .notification-group-headers,
+.notification-group .notification-group-buttons {
+	margin-bottom: 1rem;
+}
+
+.notification-group .notification-group-buttons > button:nth-child(1) {
+	background-color: alpha(var(--notif-grp-btn-coll-bg), 0.5);
+	color: var(--notif-grp-btn-coll-txt);
+}
+
+.notification-group .notification-group-buttons > button:nth-child(1):hover {
+	background-color: var(--notif-grp-btn-coll-bg);
+}
+
+.notification-group .notification-group-buttons > button:nth-child(2) {
+	background-color: alpha(var(--notif-grp-btn-close-bg), 0.5);
+	color: var(--notif-grp-btn-close-txt);
+}
+
+.notification-group .notification-group-buttons > button:nth-child(2):hover {
+	background-color: var(--notif-grp-btn-close-bg);
+}
+
+.notification-group.collapsed.not-expanded {
+	opacity: 0.4;
+}
+
+.notification-group:not(.collapsed) {
+	background-color: alpha(var(--notif-grp-exp), 0.2);
+	border-radius: 2rem;
+	padding: 1rem 0;
+}
+
+.notification-group.collapsed .notification-row:not(:last-child) {
+	opacity: 0.5;
+}
+
+.notification-group.collapsed:hover
+	.notification-row:not(:only-child)
+	.notification {
+	background-color: alpha(var(--notif-grp-collapsed-bg-hvr), 0.2);
+}

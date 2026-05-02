@@ -1,0 +1,63 @@
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content {
+	margin: 0.3rem;
+	background-color: alpha(var(--notif-content-bg), 0.3);
+	box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.1);
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content:hover {
+	background-color: var(--notif-content-hvr-bg);
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content
+	.text-box
+	.summary {
+	color: var(--notif-summary-txt);
+	margin: 1rem 0 0 1rem;
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content
+	.text-box
+	.body {
+	color: var(--notif-body-txt);
+	margin: 0 0 1rem 1rem;
+	padding-top: 1rem;
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content
+	.text-box
+	.time {
+	color: var(--notif-time-txt);
+	margin-top: 1rem;
+}
+
+.notification-row
+	.notification-background
+	.notification
+	.notification-default-action
+	.notification-content
+	.image {
+	-gtk-icon-filter: none;
+	-gtk-icon-size: 5rem;
+	border-radius: 1rem;
+	margin: 1rem;
+}

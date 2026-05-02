@@ -1,0 +1,21 @@
+/**
+ *    ░█▀▀░█░█░█▀█░█░█░█▀█░█▀▀
+ *    ░▀▀█░█▄█░█▀█░░█░░█░█░█░░
+ *    ░▀▀▀░▀░▀░▀░▀░░▀░░▀░▀░▀▀▀
+ * 
+ *    ░█▀▀░▀█▀░█░█░█░░░█▀▀    
+ *    ░▀▀█░░█░░░█░░█░░░█▀▀    
+ *    ░▀▀▀░░▀░░░▀░░▀▀▀░▀▀▀    
+ ------------------------------*/
+
+@import "color-map.css";
+
+* {
+	font-family: ComicShannsMono Nerd Font;
+}
+
+/* control center styling */
+@import "styles/control-center.css";
+
+/* notification styling */
+@import "styles/notification.css";

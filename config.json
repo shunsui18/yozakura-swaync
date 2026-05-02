@@ -1,0 +1,112 @@
+{
+	"$schema": "/etc/xdg/swaync/configSchema.json",
+	"ignore-gtk-theme": true,
+	"positionX": "center",
+	"positionY": "top",
+	"layer": "overlay",
+	"control-center-layer": "top",
+	"layer-shell": true,
+	"layer-shell-cover-screen": true,
+	"cssPriority": "user",
+	"control-center-margin-top": 20,
+	"control-center-margin-bottom": 500,
+	"control-center-margin-right": 0,
+	"control-center-margin-left": 0,
+	"notification-2fa-action": true,
+	"notification-inline-replies": true,
+	"notification-body-image-height": 100,
+	"notification-body-image-width": 200,
+	"timeout": 7,
+	"timeout-low": 3,
+	"timeout-critical": 0,
+	"fit-to-screen": true,
+	"relative-timestamps": true,
+	"control-center-width": 500,
+	"control-center-height": 600,
+	"notification-window-width": 500,
+	"keyboard-shortcuts": true,
+	"notification-grouping": true,
+	"image-visibility": "when-available",
+	"transition-time": 200,
+	"hide-on-clear": true,
+	"hide-on-action": true,
+	"text-empty": "It's Quite here.",
+	"script-fail-notify": true,
+
+	"widgets": ["label", "buttons-grid", "mpris", "title", "notifications"],
+
+	"widget-config": {
+		"label": {
+			"text": " Arch-hyprland"
+		},
+
+		"buttons-grid": {
+			"buttons-per-row": 5,
+			"actions": [
+				{
+					"label": "󰅍",
+					"description": "Clipboard History",
+					"command": "~/.config/rofi/scripts/clipboard-launch.sh",
+					"type": "toggle",
+					"update-command": "pgrep -x rofi && echo true || echo false"
+				},
+				{
+					"label": "󰂯",
+					"command": "rfkill unblock bluetooth; bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on",
+					"update-command": "bluetoothctl show | grep -q 'Powered: yes' && echo true || echo false",
+					"type": "toggle"
+				},
+				{
+					"label": "󰂛",
+					"command": "[ -f $HOME/.config/swaync/notification-alerts/mute-flag ] && rm $HOME/.config/swaync/notification-alerts/mute-flag || touch $HOME/.config/swaync/notification-alerts/mute-flag",
+					"update-command": "[ -f $HOME/.config/swaync/notification-alerts/mute-flag ] && echo true || echo false",
+					"type": "toggle"
+				},
+				{
+					"label": "󰕾",
+					"description": "Mute Toggle",
+					"command": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+					"update-command": "wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q '[MUTED]' && echo false || echo true",
+					"type": "toggle"
+				},
+				{
+					"label": "󰄜",
+					"description": "KDE Connect",
+					"command": "swaync-client -cp && ~/.config/swaync/scripts/kdeconnect-toggle.sh",
+					"type": "toggle",
+					"update-command": "pgrep -x kdeconnectd && echo true || echo false"
+				}
+			]
+		},
+
+		"mpris": {
+			"blacklist": ["vivaldi"],
+			"autohide": true,
+			"show-album-art": "always",
+			"loop-carousel": true
+		},
+
+		"title": {
+			"text": "Notifications",
+			"clear-all-button": true,
+			"button-text": ""
+		},
+
+		"notifications": {
+			"vexpand": true
+		}
+	},
+
+	"scripts": {
+		"notif-alert-normal": {
+			"exec": "~/.config/swaync/scripts/notif-volume-wrapper.sh ~/.config/swaync/notification-alerts/normal.mp3",
+			"urgency": "Normal",
+			"run-on": "receive"
+		},
+		"notif-alert-critical": {
+			"exec": "~/.config/swaync/scripts/notif-volume-wrapper.sh ~/.config/swaync/notification-alerts/critical.mp3",
+			"urgency": "Critical",
+			"run-on": "receive"
+		}
+	}
+}
