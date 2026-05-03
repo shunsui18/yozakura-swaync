@@ -233,12 +233,35 @@ done
 [[ $SCRIPTS_INSTALLED -gt 0 ]] \
   || warn "No scripts found in ${SCRIPT_DIR}/scripts/ — skipped"
 
-# ── Reload swaync if running ──────────────────────────────────────────────────
+# ── Hard-restart swaync ───────────────────────────────────────────────────────
 echo "" >&2
-if command -v swaync-client &>/dev/null && swaync-client --reload-config &>/dev/null 2>&1; then
-  success "swaync config reloaded live"
+section "  Restarting swaync"
+
+# Kill up to 5 times — swaync can be stubborn
+for _attempt in 1 2 3 4 5; do
+  if pgrep -x swaync &>/dev/null; then
+    killall -9 swaync 2>/dev/null || true
+    sleep 0.3
+  else
+    break
+  fi
+done
+
+# Confirm it's actually gone
+if pgrep -x swaync &>/dev/null; then
+  warn "swaync is still running after repeated kills — proceeding anyway"
 else
-  info "swaync not running — start it to apply the theme"
+  success "swaync stopped"
+fi
+
+# Start fresh, detached from this shell
+swaync &>/dev/null & disown
+sleep 0.5
+
+if pgrep -x swaync &>/dev/null; then
+  success "swaync restarted"
+else
+  warn "swaync did not start — launch it manually: swaync &"
 fi
 
 # ── Done ──────────────────────────────────────────────────────────────────────
