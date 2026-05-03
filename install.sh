@@ -60,12 +60,18 @@ if [[ "$SCRIPT_DIR" == /proc/* || "$SCRIPT_DIR" == /dev/fd* ]]; then
   SCRIPT_DIR="$(mktemp -d)"
   trap 'rm -rf "$SCRIPT_DIR"' EXIT
   info "Remote install detected — fetching files from GitHub..." >&2
+  echo "" >&2
+  _total=${#REMOTE_FILES[@]}
+  _idx=0
   for rel in "${REMOTE_FILES[@]}"; do
+    _idx=$((_idx + 1))
     dest="${SCRIPT_DIR}/${rel}"
     mkdir -p "$(dirname "$dest")"
-    curl -fsSL "${GITHUB_RAW}/${rel}" -o "$dest" \
+    printf "  ${DIM}[%2d/%d]${RESET}  ${CYAN}↓${RESET}  %s\n" "$_idx" "$_total" "$rel" >&2
+    curl -fsSL --max-time 30 "${GITHUB_RAW}/${rel}" -o "$dest" \
       || die "Failed to download ${rel} from GitHub"
   done
+  echo "" >&2
   # Restore executable bits on scripts
   chmod +x "${SCRIPT_DIR}"/scripts/*.sh
 fi
