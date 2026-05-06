@@ -74,7 +74,7 @@ A handcrafted pastel color palette for [swaync](https://github.com/ErikReider/Sw
 Install directly from this repository with a single command:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/swaync/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/yozakura-swaync/main/install.sh)
 ```
 
 > Running without flags launches an **interactive menu** to pick your flavor.
@@ -94,13 +94,13 @@ bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/swaync/main/instal
 
 ```bash
 # interactive menu
-bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/swaync/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/yozakura-swaync/main/install.sh)
 
 # skip menu — yoru (night)
-bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/swaync/main/install.sh) --theme yoru
+bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/yozakura-swaync/main/install.sh) --theme yoru
 
 # skip menu — hiru (day)
-bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/swaync/main/install.sh) --theme hiru
+bash <(curl -fsSL https://raw.githubusercontent.com/shunsui18/yozakura-swaync/main/install.sh) --theme hiru
 ```
 
 ---
@@ -111,7 +111,7 @@ If you prefer to install by hand:
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/shunsui18/swaync.git && cd swaync
+git clone https://github.com/shunsui18/yozakura-swaync.git && cd yozakura-swaync
 
 # 2a. Interactive menu
 bash install.sh
@@ -143,7 +143,7 @@ bash install.sh --theme yoru
 ## ✦ File Structure
 
 ```
-swaync/
+yozakura-swaync/
 ├── assets/
 │   ├── notification-center-yoru-preview.png
 │   ├── notification-center-hiru-preview.png
