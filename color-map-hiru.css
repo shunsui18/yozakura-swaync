@@ -13,7 +13,7 @@
 :root {
 	/* control center colors */
 	--cc-bg: var(--base);
-	--cc-border: var(--bloom);
+	--cc-border: var(--starlight);
 
 	/* widget label colors */
 	--wgt-label-txt: var(--text);
